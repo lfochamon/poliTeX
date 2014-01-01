@@ -265,3 +265,17 @@ Dicas
 + Escreva cada capítulo do seu documento em um arquivo .tex separado. Use o comando ```\include{capitulo.tex}``` para incluir os capítulos no seu documento principal.
 + Use espaços inquebráveis ```~```, ou seja, espaços nos quais o LaTeX não muda de linha. Use antes de parênteses, citações, números e qualquer outro ítem que ficaria estranho começando uma linha.
 + Saiba sobre os diferentes ambientes de matemática e use aquele que for mais adequado para o seu caso (```equation```, ```subequations```, ```align```, ```aligned```, ```gather```, ```gathered```, ```cases```, ```multline```). Não manipule o espaçamento e indentação de equações na mão.
+
+
+Issues
+------
+
+Problema e sugestões devem ser enviadas pelo repositório GitHub:
+
+https://github.com/lchamon/poliLaTeX
+
+
+Author
+------
+
+Chamon [luizchamon] [gmail]
