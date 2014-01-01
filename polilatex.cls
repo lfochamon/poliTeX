@@ -66,7 +66,7 @@
 \providecommand{\ABNTpnum}{}
 \DeclareOption{pnumabnt}{\renewcommand*{\ABNTpnum}{ABNT}}
 \DeclareOption{pnumromarab}{\renewcommand*{\ABNTpnum}{RomArab}}
-\ExecuteOptions{pnumromarab}
+\ExecuteOptions{pnumabnt}
 
 %% Style of page numbers in TOC
 \newboolean{ABNTpagenumstyle}
