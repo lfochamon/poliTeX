@@ -2,6 +2,15 @@
 %
 % POLILATEX.CLS
 %
+% Copyright (c) 2014 Luiz Chamon
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License (LPPL)
+% version 1.3 or (at your option) any later version.
+% The latest version of this license can be found in
+%      http://latex-project.org/lppl/lppl-1-3c.txt
+% and is reproduced in the LICENSE file.
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
