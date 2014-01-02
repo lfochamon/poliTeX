@@ -117,13 +117,13 @@ Para usar a classe poliLaTeX você precisa definir os parâmetros do seu documen
 \areaConcentracao{Área de concentração}
 ```
 
-### Local
+#### Local
 
 ```
 \local{São Paulo}
 ```
 
-### Ano
+#### Ano
 
 ```
 \data{2014}
