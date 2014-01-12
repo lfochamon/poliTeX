@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% POLILATEX.CLS
+% POLITEX.CLS
 %
 % Copyright (c) 2014 Luiz Chamon
 %
@@ -24,7 +24,7 @@
 
 %%%%%%  IDENTIFICATION  %%%%%%
 \NeedsTeXFormat{LaTeX2e}%
-\ProvidesClass{polilatex}%
+\ProvidesClass{politex}%
 	[2013/12/29 POLI-USP LaTeX Class]
 
 
@@ -130,7 +130,7 @@
 %%%%%%  PROCESS OPTIONS  %%%%%%
 %% Issue a warning for all undefined options
 \DeclareOption*{
-	\PackageWarning{polilatex}{Unknown option `\CurrentOption'}
+	\PackageWarning{politex}{Unknown option `\CurrentOption'}
 }
 
 %% Process options
@@ -1319,7 +1319,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  End of POLILATEX.CLS
+%  End of POLITEX.CLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \endinput

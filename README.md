@@ -1,9 +1,9 @@
-poliLaTeX
-=========
+poliTeX
+=======
 
 Classe do LaTeX para manuscritos da Escola Politécnica da USP.
 
-A classe poliLaTeX é baseada na classe para monografias ABNT adaptada pelo Prof. Paulo Barreto para os padrões da POLI-USP ([link](http://www.ime.usp.br/~leofl/tex/modelo_poli.zip)). Porém, ela apresenta consideráveis mudanças na implementação e funcionalidades da classe. Algumas das principais diferenças são:
+A classe poliTeX (leia-se "POLITEK") é baseada na classe para monografias ABNT adaptada pelo Prof. Paulo Barreto para os padrões da POLI-USP ([link](http://www.ime.usp.br/~leofl/tex/modelo_poli.zip)). Porém, ela apresenta consideráveis mudanças na implementação e funcionalidades da classe. Algumas das principais diferenças são:
 
 + Remoção de funções que não suportavam diretamente o padrão da POLI-USP (diferentes cabeçalhos, formatações de títulos, tipos de sumários...);
 + Limpeza do código e adição de comentários para facilitar a manutenção: a nova classe tem metade do tamanho da anterior;
@@ -18,7 +18,7 @@ A classe poliLaTeX é baseada na classe para monografias ABNT adaptada pelo Prof
 Uso
 ===
 
-O arquivo ```template.tex``` é um documento da classe poliLaTeX com todas as funcionalidades comentadas. Basta abri-lo e escrever seu TCC, dissertação ou tese. A seguir, estão as principais opções e funções da classe para referência.
+O arquivo ```template.tex``` é um documento da classe poliTeX com todas as funcionalidades comentadas. Basta abri-lo e escrever seu TCC, dissertação ou tese. A seguir, estão as principais opções e funções da classe para referência.
 
 
 Opções da classe
@@ -47,7 +47,7 @@ Opções da classe
 
 O preâmbulo
 -----------
-Para usar a classe poliLaTeX você precisa definir os parâmetros do seu documento no preâmbulo:
+Para usar a classe poliTeX você precisa definir os parâmetros do seu documento no preâmbulo:
 
 #### Título
 
@@ -272,7 +272,7 @@ Issues
 
 Problema e sugestões devem ser enviadas pelo repositório GitHub:
 
-https://github.com/lchamon/poliLaTeX
+https://github.com/lchamon/poliTeX
 
 
 Author
