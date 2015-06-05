@@ -148,7 +148,7 @@ De acordo com a norma ABNT/POLI, os elementos pré-textuais devem aparecer na se
 10. Sumário
 
 
-**Nota**: O termo de julgamento (que fica entre a falsa folha de rosto e a folha de rosto) é obtido da banca e a ficha catalográfica (que fica entre a folha de rosto e a dedicatória) deve ser solicitada ao setor de bibliotecas (http://www.poli.usp.br/en/bibliotecas/servicos/ficha-catalografica.html).
+**Nota**: O termo de julgamento (que fica entre a falsa folha de rosto e a folha de rosto) é obtido da banca e a ficha catalográfica (que fica entre a folha de rosto e a dedicatória) deve ser solicitada ao setor de bibliotecas (http://www.poli.usp.br/en/bibliotecas/servicos/catalogacao-na-publicacao.html).
 
 **Nota**: A língua do documento é definida pelo uso do pacote ```babel```. Os títulos das seções são traduzidos automaticamente. Para escrever o texto em português, use no preâmbulo ```\usepackage[brazil]{babel}```. Para inglês, use ```\usepackage[english]{babel}```.
 
