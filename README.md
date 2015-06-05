@@ -152,6 +152,8 @@ De acordo com a norma ABNT/POLI, os elementos pré-textuais devem aparecer na se
 
 **Nota**: A língua do documento é definida pelo uso do pacote ```babel```. Os títulos das seções são traduzidos automaticamente. Para escrever o texto em português, use no preâmbulo ```\usepackage[brazil]{babel}```. Para inglês, use ```\usepackage[english]{babel}```.
 
+**Atenção**: Ao trocar de língua, sempre faça um ```make clean``` ou apague todos os arquivos auxiliares criados pelo LaTeX antes de compilar. Esse é um problema do pacote ```babel```. Mas não se preocupe: se você esquecer, o ```babel``` é chato e vai lembrar você com um erro. Considere-se avisado!
+
 
 #### Capa e folhas de rosto
 
