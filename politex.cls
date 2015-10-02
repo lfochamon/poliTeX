@@ -1201,7 +1201,7 @@
   {\end{espacosimples}\newpage}
 
 
-%%%%%%  ACKNOWLEDGEMENTS  %%%%%%
+%%%%%%  EPIGRAPH  %%%%%%
 
 \newcommand{\epigrafe}[1]
 {%
@@ -1231,7 +1231,7 @@
    \ifthenelse{\boolean{ABNThypertoc}}{\renewcommand{\chaptertype}{}}{}%
    \begin{espacosimples}%
   }%
-  {\end{espacosimples}\newpage}%abstract
+  {\end{espacosimples}\newpage}
 
 
 %%%%%%  RESUMO  %%%%%%
@@ -1246,7 +1246,7 @@
    \ifthenelse{\boolean{ABNThypertoc}}{\renewcommand{\chaptertype}{}}{}%
    \begin{espacosimples}%
   }%
-  {\end{espacosimples}\newpage}%abstract
+  {\end{espacosimples}\newpage}
 
 
 %%%%%%  SIGNATURE SHEET  %%%%%%
@@ -1304,6 +1304,16 @@
  }%
  {}
 
+
+%%%%%%  ARBITRARY PRE TEXTUAL SECTION  %%%%%%
+
+\newenvironment{pretextualsection}[1]%
+  {%
+   \if@openright\cleardoublepage\else\clearpage\fi%
+   \pretextualchapter{#1}%
+   \begin{espacosimples}%
+  }%
+  {\end{espacosimples}\newpage}
 
 
 %%%%%%  POST SECTION INDENTATION  %%%%%%

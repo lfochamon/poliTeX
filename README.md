@@ -225,6 +225,16 @@ Abstract...
 \listadetabelas
 ```
 
+**Nota**: Você também pode incluir listas personalizadas (e.g., lista de símbolos ou siglas) usando o ambiente `pretextualsection`. Estas listas são definidas pelo usuário (você deve inseri-las manualmente, mesmo que o conteúdo seja gerado usando algum pacote do LaTeX):
+
+```
+\begin{pretextualsection}{Lista de símbolos}
+
+Lista de símbolos...
+
+\end{pretextualsection}
+```
+
 
 #### Sumário
 
