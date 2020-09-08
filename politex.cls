@@ -1125,6 +1125,16 @@
     Título de Engenheiro #1.}%
 }
 
+%% Monografia de MBA PECE
+\newcommand{\monografia}[1]{%
+  \renewcommand{\PoliTipoDocData}{Monografia (MBA)}
+  \comentario{Monografia apresentada à Escola
+    Politécnica da Universidade de
+    São Paulo para obtenção do
+    Certificado de Especialista em #1.}%
+}
+
+
 %% Dissertação de mestrado
 \newcommand{\dissertacao}[1]{%
   \renewcommand{\PoliTipoDocData}{Dissertação (Mestrado)}
@@ -1201,7 +1211,7 @@
   {\end{espacosimples}\newpage}
 
 
-%%%%%%  EPIGRAPH  %%%%%%
+%%%%%%  ACKNOWLEDGEMENTS  %%%%%%
 
 \newcommand{\epigrafe}[1]
 {%
@@ -1231,7 +1241,7 @@
    \ifthenelse{\boolean{ABNThypertoc}}{\renewcommand{\chaptertype}{}}{}%
    \begin{espacosimples}%
   }%
-  {\end{espacosimples}\newpage}
+  {\end{espacosimples}\newpage}%abstract
 
 
 %%%%%%  RESUMO  %%%%%%
@@ -1246,7 +1256,7 @@
    \ifthenelse{\boolean{ABNThypertoc}}{\renewcommand{\chaptertype}{}}{}%
    \begin{espacosimples}%
   }%
-  {\end{espacosimples}\newpage}
+  {\end{espacosimples}\newpage}%abstract
 
 
 %%%%%%  SIGNATURE SHEET  %%%%%%
@@ -1304,16 +1314,6 @@
  }%
  {}
 
-
-%%%%%%  ARBITRARY PRE TEXTUAL SECTION  %%%%%%
-
-\newenvironment{pretextualsection}[1]%
-  {%
-   \if@openright\cleardoublepage\else\clearpage\fi%
-   \pretextualchapter{#1}%
-   \begin{espacosimples}%
-  }%
-  {\end{espacosimples}\newpage}
 
 
 %%%%%%  POST SECTION INDENTATION  %%%%%%
