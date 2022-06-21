@@ -201,7 +201,11 @@
 %%  Defining "POLIheader" pagestyle
 \fancypagestyle{POLIheader}{%
 	\fancyhf{} % clear all header and footer fields
-	\fancyhead[RO,LE]{\small\thepage}
+	\if@twoside%
+		\fancyhead[RO,LE]{\small\thepage}
+	\else%
+		\fancyhead[RO]{\small\thepage}
+	\fi%
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
 }
@@ -1045,7 +1049,8 @@
     \begin{minipage}{.49\textwidth}
       \begin{espacoumemeio}
         \begin{sloppypar}
-            {\comentarioformat\ABNTcomentariodata}\\[0.3cm]
+            {\comentarioformat\ABNTcomentariodata}
+            \vspace{0.3cm}
         \end{sloppypar}
 
       \end{espacoumemeio}
@@ -1078,7 +1083,8 @@
     \begin{minipage}{.49\textwidth}
       \begin{espacoumemeio}
         \begin{sloppypar}
-            {\comentarioformat\ABNTcomentariodata}\\[0.3cm]
+            {\comentarioformat\ABNTcomentariodata}
+            \vspace{0.3cm}
         \end{sloppypar}
 
         \ABNTifnotempty{\ABNTareaconcdata}%
