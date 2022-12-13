@@ -20,6 +20,17 @@ Uso
 
 O arquivo ```template.tex``` é um documento da classe poliTeX com todas as funcionalidades comentadas. Basta abri-lo e escrever seu TCC, dissertação ou tese. A seguir, estão as principais opções e funções da classe para referência.
 
+Sumário
+----------------
+
+1. [Opções de classe](#opções-da-classe)
+2. [O preâmbulo](#how-to-run)
+3. [Elementos pré-textuais](#elementos-pré-textuais)
+4. [Funções auxiliares](#funções-auxiliares)
+5. [Citações e referências](#citações-e-referências)
+5. [Dicas](#dicas)
+6. [Issues](#issues)
+6. [Autor](#autor)
 
 Opções da classe
 ----------------
@@ -129,9 +140,7 @@ Para usar a classe poliTeX você precisa definir os parâmetros do seu documento
 \data{2014}
 ```
 
-
-
-Geração de elementos pré-textuais
+Elementos pré-textuais
 ---------------------------------
 
 De acordo com a norma ABNT/POLI, os elementos pré-textuais devem aparecer na seguinte ordem:
@@ -242,12 +251,12 @@ Lista de símbolos...
 \sumario
 ```
 
-
-
 Funções auxiliares
 ------------------
 
-#### Citações longas (mais de 3 linhas)
+#### Citações longas
+
+Nós consideramos citações longas com mais de 3 linhas.
 
 ```
 \begin{citacaoLonga}
@@ -261,10 +270,8 @@ Funções auxiliares
 \capepigrafe[0.5\textwidth]{``Frase espirituosa de um autor famoso''}{Autor famoso}
 ```
 
-
-
-Citações e referências ABNT: ABNTeX 2
--------------------------------------
+Citações e referências
+----------------------
 
 O padrão da POLI exige que citações e referências estejam no formato ABNT. Para fazer isto usando BibTeX, instale o pacote ABNTeX 2 disponível pelo CTAN (http://www.ctan.org/tex-archive/macros/latex/contrib/abntex2). Em seguida, inclua no preâmbulo ```\usepackage[num]{abntex2cite}``` (para citações no modelo numérico) ou ```\usepackage[alf]{abntex2cite}``` (para citações no modelo autor-data). Logo antes das suas referências, declare o estilo ```\bibliographystyle{abntex2-num}``` ou ```\bibliographystyle{abntex2-alf}```. Se preferir usar outro estilo de referência (do IEEE, por exemplo), ignore o pacote ```abntex2cite``` e declare o estilo antes do ```\bibliography```.
 
@@ -282,12 +289,12 @@ Dicas
 Issues
 ------
 
-Problema e sugestões devem ser enviadas pelo repositório GitHub:
+Para submeter problemas e sugestões, o leitor deve enviar uma postagem na seção `Issues`:
 
-https://github.com/lchamon/poliTeX
+https://github.com/lfochamon/poliTeX/issues
 
 
-Author
+Autor
 ------
 
 Chamon [luizchamon] [gmail]
