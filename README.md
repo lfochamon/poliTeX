@@ -24,7 +24,7 @@ Sumário
 ----------------
 
 1. [Opções de classe](#opções-da-classe)
-2. [O preâmbulo](#how-to-run)
+2. [Preâmbulo](#preâmbulo)
 3. [Elementos pré-textuais](#elementos-pré-textuais)
 4. [Funções auxiliares](#funções-auxiliares)
 5. [Citações e referências](#citações-e-referências)
@@ -34,6 +34,8 @@ Sumário
 
 Opções da classe
 ----------------
+
+Para adicionar as opções à classe, você deve inserir a referência do seguinte modo `\documentclass[opção_1, opção_n]{politex}`
 
 - ```pnumromarab```: Numera as páginas usando algorismos romanos na parte pré-textual e algarismo arábicos na parte textual. A contagem de páginas reinicia no início da parte textual. Se esta opção não for definida, o padrão da ABNT/POLI é seguido, numerando todas as páginas com algorismo arábicos, iniciando a contagem na falsa folha de rosto.
 
@@ -56,7 +58,7 @@ Opções da classe
 - ```noindentfirst```: O padrão é que todos os parágrafos sejam indentados. Se desejar, pode ativar esta opção que força o primeiro parágrafo de capítulos/seções a não serem indentados.
 
 
-O preâmbulo
+Preâmbulo
 -----------
 Para usar a classe poliTeX você precisa definir os parâmetros do seu documento no preâmbulo:
 
@@ -275,8 +277,6 @@ Citações e referências
 
 O padrão da POLI exige que citações e referências estejam no formato ABNT. Para fazer isto usando BibTeX, instale o pacote ABNTeX 2 disponível pelo CTAN (http://www.ctan.org/tex-archive/macros/latex/contrib/abntex2). Em seguida, inclua no preâmbulo ```\usepackage[num]{abntex2cite}``` (para citações no modelo numérico) ou ```\usepackage[alf]{abntex2cite}``` (para citações no modelo autor-data). Logo antes das suas referências, declare o estilo ```\bibliographystyle{abntex2-num}``` ou ```\bibliographystyle{abntex2-alf}```. Se preferir usar outro estilo de referência (do IEEE, por exemplo), ignore o pacote ```abntex2cite``` e declare o estilo antes do ```\bibliography```.
 
-
-
 Dicas
 -----
 
@@ -284,7 +284,6 @@ Dicas
 + Escreva cada capítulo do seu documento em um arquivo .tex separado. Use o comando ```\include{capitulo.tex}``` para incluir os capítulos no seu documento principal.
 + Use espaços inquebráveis ```~```, ou seja, espaços nos quais o LaTeX não muda de linha. Use antes de parênteses, citações, números e qualquer outro ítem que ficaria estranho começando uma linha.
 + Saiba sobre os diferentes ambientes de matemática e use aquele que for mais adequado para o seu caso (```equation```, ```subequations```, ```align```, ```aligned```, ```gather```, ```gathered```, ```cases```, ```multline```). Não manipule o espaçamento e indentação de equações na mão.
-
 
 Issues
 ------
