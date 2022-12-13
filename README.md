@@ -286,7 +286,7 @@ Dicas
 + Saiba sobre os diferentes ambientes de matemática e use aquele que for mais adequado para o seu caso (```equation```, ```subequations```, ```align```, ```aligned```, ```gather```, ```gathered```, ```cases```, ```multline```). Não manipule o espaçamento e indentação de equações na mão.
 
 Issues
-------
+======
 
 Para submeter problemas e sugestões, o leitor deve enviar uma postagem na seção `Issues`:
 
@@ -294,6 +294,6 @@ https://github.com/lfochamon/poliTeX/issues
 
 
 Autor
-------
+======
 
 Chamon [luizchamon] [gmail]
