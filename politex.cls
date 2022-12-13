@@ -252,8 +252,6 @@
 \ifthenelse{\equal{\ABNTpnum}{ABNT}}{
 	% ABNT strict
 	% Page style is empty until TOC
-	\renewcommand{\thepage}{}
-	
 	\renewcommand{\ABNTBeginOfTextualPart}{
 		\renewcommand{\thepage}{\arabic{page}}
 		\pagestyle{POLIheader}
