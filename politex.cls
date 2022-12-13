@@ -243,7 +243,17 @@
 % Roman/Arabic
 % Use roman numerals for pretextual part
 % Use arabic numerals for textual part (restart counter)
-\renewcommand{\thepage}{\roman{page}}
+%% Numbering schemes
+\ifthenelse{\equal{\ABNTpnum}{ABNT}}{
+	% ABNT strict
+	% Page style is empty until TOC
+	% We leave this statement intentionally blank 
+}{
+	% Roman/Arabic
+	% Use roman numerals for pretextual part
+	% Use arabic numerals for textual part (restart counter)
+	\renewcommand{\thepage}{\roman{page}}
+}
 
 \renewcommand{\ABNTBeginOfTextualPart}{
     \setcounter{page}{1}
