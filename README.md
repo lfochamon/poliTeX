@@ -28,9 +28,9 @@ Sumário
 3. [Elementos pré-textuais](#elementos-pré-textuais)
 4. [Funções auxiliares](#funções-auxiliares)
 5. [Citações e referências](#citações-e-referências)
-5. [Dicas](#dicas)
-6. [Issues](#issues)
-6. [Autor](#autor)
+6. [Dicas](#dicas)
+7. [Issues](#issues)
+8. [Autor](#autor)
 
 Opções da classe
 ----------------
