@@ -13,8 +13,6 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                                                  %%
 %%                            PREAMBLE                              %%
@@ -130,7 +128,7 @@
 %%%%%%  PROCESS OPTIONS  %%%%%%
 %% Issue a warning for all undefined options
 \DeclareOption*{
-	\PackageWarning{politex}{Unknown option `\CurrentOption'}
+    \PackageWarning{politex}{Unknown option `\CurrentOption'}
 }
 
 %% Process options
@@ -143,16 +141,16 @@
 %% ABNTeX trick for continuous figure/table counting
 %% Redefine \newcounter to exclude [chapter] in case it is a figure/table.
 \ifthenelse{\boolean{ABNTnumbering}}{
-	% Save old \newcounter
-	\let\ABNToldnewcounter\newcounter\relax
-	\def\ABNTeatbrackets[#1]{\relax}
-
-	\renewcommand{\newcounter}[1]{%
-		\ifthenelse{\equal{#1}{figure}\or\equal{#1}{table}}%
-			{\ABNToldnewcounter{#1}%
-			\@ifnextchar[{\ABNTeatbrackets}{} }%
-			{\ABNToldnewcounter{#1}}%
-	}
+    % Save old \newcounter
+    \let\ABNToldnewcounter\newcounter\relax
+    \def\ABNTeatbrackets[#1]{\relax}
+    
+    \renewcommand{\newcounter}[1]{%
+        \ifthenelse{\equal{#1}{figure}\or\equal{#1}{table}}%
+            {\ABNToldnewcounter{#1}%
+            \@ifnextchar[{\ABNTeatbrackets}{} }%
+            {\ABNToldnewcounter{#1}}%
+    }
 }{}
 
 
@@ -162,15 +160,10 @@
 
 %% Undo the \newcounter redefinition and fix counter style
 \ifthenelse{\boolean{ABNTnumbering}}{
-	\let\newcounter\ABNToldnewcounter\relax
-	\renewcommand*{\thefigure}{\arabic{figure}}
-	\renewcommand*{\thetable}{\arabic{table}}
+    \let\newcounter\ABNToldnewcounter\relax
+    \renewcommand*{\thefigure}{\arabic{figure}}
+    \renewcommand*{\thetable}{\arabic{table}}
 }{}
-
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                                                  %%
@@ -213,19 +206,19 @@
 
 %%%%%%  MARGIN SETTINGS  %%%%%%
 
-\newgeometry{	offset = 0pt,		%	Offset between layout and page border
-				top = 3cm,			%	Top margin
-				bottom = 2cm,		%	Bottom margin
-				outer = 2cm,		%	Right (outer) margin
-				headheight = 14pt,	%	Height of the header
-				headsep = 22pt,		%	Separation from text
-				ignorehead,
-				ignorefoot
+\newgeometry{	
+    offset = 0pt,		%	Offset between layout and page border
+    top = 3cm,			%	Top margin
+    bottom = 2cm,		%	Bottom margin
+    outer = 2cm,		%	Right (outer) margin
+    headheight = 22pt,	%	Height of the header
+    headsep = 17pt,		%	Separation from text
+    ignorehead,
+    ignorefoot
 }
 
 % Set inner margin and twoside (if necessary) printing
 \POLIgeo
-
 
 %%%%%%  PAGE NUMBERING  %%%%%%
 
@@ -248,29 +241,19 @@
 \pagestyle{empty}
 \renewcommand{\chaptertitlepagestyle}{empty}
 
+% ABNT strict
+% Page style is empty until TOC
 %% Numbering schemes
-\ifthenelse{\equal{\ABNTpnum}{ABNT}}{
-	% ABNT strict
-	% Page style is empty until TOC
-	\renewcommand{\thepage}{}
-	
-	\renewcommand{\ABNTBeginOfTextualPart}{
-		\renewcommand{\thepage}{\arabic{page}}
-		\pagestyle{POLIheader}
-		\renewcommand{\chaptertitlepagestyle}{POLIheader}
-	}
-}{
-	% Roman/Arabic
-	% Use roman numerals for pretextual part
-	% Use arabic numerals for textual part (restart counter)
-	\renewcommand{\thepage}{\roman{page}}
-	
-	\renewcommand{\ABNTBeginOfTextualPart}{
-		\setcounter{page}{1}
-		\renewcommand{\thepage}{\arabic{page}}
-		\pagestyle{POLIheader}
-		\renewcommand{\chaptertitlepagestyle}{POLIheader}
-	}
+% Roman/Arabic
+% Use roman numerals for pretextual part
+% Use arabic numerals for textual part (restart counter)
+\renewcommand{\thepage}{\roman{page}}
+
+\renewcommand{\ABNTBeginOfTextualPart}{
+    \setcounter{page}{1}
+    \renewcommand{\thepage}{\arabic{page}}
+    \pagestyle{POLIheader}
+    \renewcommand{\chaptertitlepagestyle}{POLIheader}
 }
 
 
@@ -278,27 +261,27 @@
 
 %% Define \espaco command: takes "simples", "umemeio", "duplo", or a numerical value
 \newcommand{\espaco}[1]{
-	\ifthenelse{\equal{#1}{simples}}		% espacamento simples
-		{\setstretch{\taxaespacosimples}}{
-	\ifthenelse{\equal{#1}{umemeio}}		% espacamento 1.5
-		{\setstretch{\taxaespacoumemeio}}{
-	\ifthenelse{\equal{#1}{duplo}}			% espacamento duplo
-		{\setstretch{\taxaespacoduplo}}{
-	\setstretch{#1}}}}						% espacamento dado
+    \ifthenelse{\equal{#1}{simples}}		% espacamento simples
+        {\setstretch{\taxaespacosimples}}{
+    \ifthenelse{\equal{#1}{umemeio}}		% espacamento 1.5
+        {\setstretch{\taxaespacoumemeio}}{
+    \ifthenelse{\equal{#1}{duplo}}			% espacamento duplo
+        {\setstretch{\taxaespacoduplo}}{
+    \setstretch{#1}}}}						% espacamento dado
 }
 
 %% Set line spacing environments
 % single spacing
 \newenvironment{espacosimples}%
-	{\begin{spacing}{\taxaespacosimples}}{\end{spacing}}
+{\begin{spacing}{\taxaespacosimples}}{\end{spacing}}
 
 % one and a half spacing
 \newenvironment{espacoumemeio}%
-	{\begin{spacing}{\taxaespacoumemeio}}{\end{spacing}}
+{\begin{spacing}{\taxaespacoumemeio}}{\end{spacing}}
 
 % double spacing
 \newenvironment{espacoduplo}%
-	{\begin{spacing}{\taxaespacoduplo}}{\end{spacing}}
+{\begin{spacing}{\taxaespacoduplo}}{\end{spacing}}
 
 %% Set default spacing and check for hypperref package
 \newboolean{ABNThypertoc}
@@ -330,12 +313,14 @@
 
 %% Chapter
 \renewcommand{\chapter}{%
-	\cleardoublepage%
-	\thispagestyle{\chaptertitlepagestyle}%
-	\ifthenelse{\boolean{ABNTinpretext}\and\boolean{ABNTaftertoc}}{%
-		% Change to textual part
-		\setboolean{ABNTinpretext}{false}%
-		\ABNTBeginOfTextualPart%
+    \cleardoublepage%
+    \thispagestyle{\chaptertitlepagestyle}%
+    \ifthenelse{
+        \boolean{ABNTinpretext}\and\boolean{ABNTaftertoc}
+    }{%
+        % Change to textual part
+        \setboolean{ABNTinpretext}{false}%
+        \ABNTBeginOfTextualPart%
     }{}%
 	\global\@topnum\z@% Prevents figures from going to the top of page
 	\@afterindentfalse%
@@ -371,56 +356,56 @@
 
 %% Include item in TOC (or not) 
 \newcommand{\ABNTaddcontentsline}[3]{%
-	\ifthenelse{\boolean{ABNTNextOutOfTOC}}%
-		{\setboolean{ABNTNextOutOfTOC}{false}}%
-		{%
-		\ifthenelse{\boolean{ABNThypertoc}}%
-			{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\thepage}{#2.\csname theH#2\endcsname}}}%
-			{\addcontentsline{#1}{#2}{#3}}%
-		}%
+    \ifthenelse{\boolean{ABNTNextOutOfTOC}}%
+    {\setboolean{ABNTNextOutOfTOC}{false}}%
+    {%
+    \ifthenelse{\boolean{ABNThypertoc}}%
+        {\addtocontents{#1}{\protect\contentsline{#2}{#3}{\thepage}{#2.\csname theH#2\endcsname}}}%
+        {\addcontentsline{#1}{#2}{#3}}%
+    }%
 }
 
 %% \@chapter
 \def\@chapter[#1]#2{%
-	\ifthenelse{\boolean{ABNThypertoc}}%
-		{\renewcommand{\theHchapter}{\chaptertype\thechapter}}{}%
-%
-	% Chapter numbering
-	\ifnum \c@secnumdepth > \m@ne
-		\refstepcounter{chapter}%
-		\chaptermark{#1}%
-		\typeout{\@chapapp\space\thechapter.}%
-	\else
-		\chaptermark{#1}%
-	\fi
-%
-	% Include in TOC
-	\ifthenelse{\boolean{ABNTaftertoc}}%
-		{\ABNTaddcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}}{}%
-	\if@twocolumn
-		\@topnewpage[\@makechapterhead{#2}]%
-	\else
-		\@makechapterhead{#2}%
-		\@afterheading%
-	\fi\par%
+    \ifthenelse{\boolean{ABNThypertoc}}%
+        {\renewcommand{\theHchapter}{\chaptertype\thechapter}}{}%
+    %
+    % Chapter numbering
+    \ifnum \c@secnumdepth > \m@ne
+        \refstepcounter{chapter}%
+        \chaptermark{#1}%
+        \typeout{\@chapapp\space\thechapter.}%
+    \else
+        \chaptermark{#1}%
+    \fi
+    %
+    % Include in TOC
+    \ifthenelse{\boolean{ABNTaftertoc}}%
+        {\ABNTaddcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}}{}%
+    \if@twocolumn
+        \@topnewpage[\@makechapterhead{#2}]%
+    \else
+        \@makechapterhead{#2}%
+        \@afterheading%
+    \fi\par%
 }
 
 %% \@schapter
 \def\@schapter#1{%
-	\ifthenelse{\boolean{ABNThypertoc}}%
-		{\renewcommand{\theHchapter}{\chaptertype\thechapter}}{}%
-	\if@twocolumn
-		\@topnewpage[\@makeschapterhead{#1}]%
-	\else
-		\@makeschapterhead{#1}%
-		\@afterheading%
-	\fi
-	\markboth{#1}{#1}
-	% Include in TOC
-	\ifthenelse{\boolean{ABNTaftertoc}}
-	   {\ABNTaddcontentsline{toc}{chapter}{#1}}
-	   {}
-	\resetsubcounters{chapter}\par
+    \ifthenelse{\boolean{ABNThypertoc}}%
+        {\renewcommand{\theHchapter}{\chaptertype\thechapter}}{}%
+    \if@twocolumn
+        \@topnewpage[\@makeschapterhead{#1}]%
+    \else
+        \@makeschapterhead{#1}%
+        \@afterheading%
+    \fi
+    \markboth{#1}{#1}
+    % Include in TOC
+    \ifthenelse{\boolean{ABNTaftertoc}}
+       {\ABNTaddcontentsline{toc}{chapter}{#1}}
+       {}
+    \resetsubcounters{chapter}\par
 }%
 
 %% \@part
@@ -742,7 +727,7 @@
   \settowidth{\ABNTanapindent}{\MakeUppercase{\anapchaptername}
           \thechapter{} -- }
 
-  \vspace*{30pt}
+  \vspace*{-50pt}
 
   \raggedright\espaco{1.2}\par  
   \begin{list}{}{%
@@ -790,7 +775,7 @@
 
 
 %%%%%%  TOC  %%%%%%
-% Same as old \tableofcontents, but redefined to accomodate changes in
+% Same as old \tableofcontents, but redefined to accommodate changes in
 % \chapter* (which is used in the original \tableofcontents)
 
 \newboolean{ABNTrestorecol} % new boolean to avoid conflicts
@@ -936,16 +921,11 @@
 {\end{list}\end{espacosimples}}
 
 
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                                                  %%
 %%                       PRE-TEXTUAL ELEMENTS                       %%
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \newcommand{\fcformat}{\textsf}
 
@@ -1077,33 +1057,35 @@
 	\vspace{\authorTitleLength}
     {\tituloformat \ABNTuppercasetitulodata}
 
+    {\vspace{.8cm}
+    {\tituloformat \textbf{Versão Original}}}
+    
     % comentário
     \vspace{2cm}
     \hspace{.5\textwidth} % posicionando a minipage 
     \begin{minipage}{.49\textwidth}
       \begin{espacoumemeio}
         \begin{sloppypar}
-            {\comentarioformat\ABNTcomentariodata}
-            \vspace{0.3cm}
+            {\comentarioformat\ABNTcomentariodata}\\[0.3cm]
         \end{sloppypar}
-
+    
         \ABNTifnotempty{\ABNTareaconcdata}%
           {%
             {\areaconcnameformat\ABNTareaconcname}
             {\areaconcformat\ABNTareaconcdata}\par%\protect\\
           }
-				\ABNTifnotempty{\ABNTorientadordata}%
-				    {%
-					  \vspace{.8cm}
-				      {\orientadornameformat\ABNTorientadorname}
-				      {\orientadorformat\ABNTorientadordata}\par%\protect\\
-				    }
-				\ABNTifnotempty{\ABNTcoorientadordata}
-					  {%
-						\vspace{.8cm}
-					    {\coorientadornameformat\ABNTcoorientadorname}
-					    {\coorientadorformat\ABNTcoorientadordata}
-					  }
+            \ABNTifnotempty{\ABNTorientadordata}%
+            {%
+              \vspace{.8cm}
+              {\orientadornameformat\ABNTorientadorname}
+              {\orientadorformat\ABNTorientadordata}\par%\protect\\
+            }
+            \ABNTifnotempty{\ABNTcoorientadordata}
+            {%
+              \vspace{.8cm}
+              {\coorientadornameformat\ABNTcoorientadorname}
+              {\coorientadorformat\ABNTcoorientadordata}
+            }
       \end{espacoumemeio} 
     \end{minipage} 
 
