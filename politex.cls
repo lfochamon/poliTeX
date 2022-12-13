@@ -194,11 +194,7 @@
 %%  Defining "POLIheader" pagestyle
 \fancypagestyle{POLIheader}{%
 	\fancyhf{} % clear all header and footer fields
-	\if@twoside%
-		\fancyhead[RO,LE]{\small\thepage}
-	\else%
-		\fancyhead[RO]{\small\thepage}
-	\fi%
+	\fancyhead[RO,LE]{\small\thepage}
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
 }
@@ -953,7 +949,7 @@
 \providecommand{\ABNTuppercasetitulodata}{}
 \newcommand{\titulo}[1]{
 \renewcommand{\ABNTtitulodata}{#1}
-\renewcommand{\ABNTuppercasetitulodata}{\uppercase{#1}}
+\renewcommand{\ABNTuppercasetitulodata}{#1}
 }
 \newcommand{\tituloformat}{\ABNTtitulosize\ABNTchapterfont}
 
@@ -1020,17 +1016,22 @@
     {\autorformat \ABNTautordata} \par
 	% Distance = 12cm - (margin top) - (authors height)
 	\setlength{\authorTitleLength}{12cm - 3.2cm - \totalheightof{\vbox{\autorformat \ABNTautordata}}}
-	\vspace{\authorTitleLength}
+    
+    \vspace{\authorTitleLength}
     {\tituloformat \ABNTuppercasetitulodata}
-
+    
+    {
+        \vspace{.8cm}
+        {\tituloformat \textbf{Versão Original}}
+    }
+    
     % comentário
     \vspace{2cm}
     \hspace{.5\textwidth} % posicionando a minipage 
     \begin{minipage}{.49\textwidth}
       \begin{espacoumemeio}
         \begin{sloppypar}
-            {\comentarioformat\ABNTcomentariodata}
-            \vspace{0.3cm}
+            {\comentarioformat\ABNTcomentariodata}\\[0.3cm]
         \end{sloppypar}
 
       \end{espacoumemeio}
