@@ -1014,8 +1014,9 @@
   \begin{center} 
     \espaco{1.2}
     {\autorformat \ABNTautordata} \par
-	% Distance = 12cm - (margin top) - (authors height)
-	\setlength{\authorTitleLength}{12cm - 3.2cm - \totalheightof{\vbox{\autorformat \ABNTautordata}}}
+
+    % Distance = 12cm - (margin top) - (authors height)
+    \setlength{\authorTitleLength}{12cm - 3.2cm - \totalheightof{\vbox{\autorformat \ABNTautordata}}}
     
     \vspace{\authorTitleLength}
     {\tituloformat \ABNTuppercasetitulodata}
