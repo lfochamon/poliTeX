@@ -1031,16 +1031,19 @@
 % Author, title, comments, area of study, advisor,
 % co-advisor (if any), place, and year
 
-\newcommand{\falsafolhaderosto}{%
+\newcommand{\falsafolhaderosto}[1]{%
   \setcounter{page}{1}
   \begin{center} 
     \espaco{1.2}
     {\autorformat \ABNTautordata} \par
 	% Distance = 12cm - (margin top) - (authors height)
-	\setlength{\authorTitleLength}{12cm - 3.2cm - \totalheightof{\vbox{\autorformat \ABNTautordata}}}
+	\setlength{\authorTitleLength}{10cm - 3.2cm - \totalheightof{\vbox{\autorformat \ABNTautordata}}}
 	\vspace{\authorTitleLength}
     {\tituloformat \ABNTuppercasetitulodata}
 
+    \vspace{1cm}
+    {\tituloformat Versão #1}
+    
     % comentário
     \vspace{2cm}
     \hspace{.5\textwidth} % posicionando a minipage 
@@ -1065,16 +1068,19 @@
 }
 
 
-\newcommand{\folhaderosto}{%
+\newcommand{\folhaderosto}[1]{%
   \setcounter{page}{1}
   \begin{center} 
     \espaco{1.2}
     {\autorformat \ABNTautordata} \par
 	% Distance = 12cm - (margin top) - (authors height)
-	\setlength{\authorTitleLength}{12cm - 3.2cm - \totalheightof{\vbox{\autorformat \ABNTautordata}}}
+	\setlength{\authorTitleLength}{10cm - 3.2cm - \totalheightof{\vbox{\autorformat \ABNTautordata}}}
 	\vspace{\authorTitleLength}
     {\tituloformat \ABNTuppercasetitulodata}
 
+    \vspace{1cm}
+    {\tituloformat Versão #1}
+    
     % comentário
     \vspace{2cm}
     \hspace{.5\textwidth} % posicionando a minipage 
