@@ -1135,6 +1135,15 @@
     Título de Engenheiro #1.}%
 }
 
+%% Monografia de MBA PECE
+\newcommand{\monografia}[1]{%
+  \renewcommand{\PoliTipoDocData}{Monografia (MBA)}
+  \comentario{Monografia apresentada à Escola
+    Politécnica da Universidade de
+    São Paulo para obtenção do
+    Certificado de Especialista em #1.}%
+}
+
 %% Dissertação de mestrado
 \newcommand{\dissertacao}[1]{%
   \renewcommand{\PoliTipoDocData}{Dissertação (Mestrado)}
