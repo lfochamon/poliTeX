@@ -1323,18 +1323,6 @@
  }%
  {}
 
-
-%%%%%%  ARBITRARY PRE TEXTUAL SECTION  %%%%%%
-
-\newenvironment{pretextualsection}[1]%
-  {%
-   \if@openright\cleardoublepage\else\clearpage\fi%
-   \pretextualchapter{#1}%
-   \begin{espacosimples}%
-  }%
-  {\end{espacosimples}\newpage}
-
-
 %%%%%%  POST SECTION INDENTATION  %%%%%%
 
 \ifthenelse{\boolean{ABNTindentfirst}}%
