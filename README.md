@@ -1,6 +1,11 @@
 poliTeX
 =======
 
+**Infelizmente, eu não tenho mais tempo para manter esse repositório.  
+A classe poliTeX continua funcionando para escrever sua monografia/dissertacão/tese, mas eu não posso mais atender a pedidos de funcionalidades, responder a dúvidas ou resolver bugs. Boa sorte a todos!**
+
+---
+
 Classe do LaTeX para manuscritos da Escola Politécnica da USP.
 
 A classe poliTeX (leia-se "POLITEK") é baseada na classe para monografias ABNT adaptada pelo Prof. Paulo Barreto para os padrões da POLI-USP ([link](http://www.ime.usp.br/~leofl/tex/modelo_poli.zip)). Porém, ela apresenta consideráveis mudanças na implementação e funcionalidades da classe. Algumas das principais diferenças são:
