@@ -290,9 +290,3 @@ Issues
 Problema e sugestões devem ser enviadas pelo repositório GitHub:
 
 https://github.com/lchamon/poliTeX
-
-
-Author
-------
-
-Chamon [luizchamon] [gmail]
